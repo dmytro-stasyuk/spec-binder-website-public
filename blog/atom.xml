@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://dmytro-stasyuk.github.io/spec-binder-website-public/blog</id>
+    <id>https://specbinder.dev/blog</id>
     <title>SpecBinder Blog</title>
     <updated>2026-03-11T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://dmytro-stasyuk.github.io/spec-binder-website-public/blog"/>
+    <link rel="alternate" href="https://specbinder.dev/blog"/>
     <subtitle>SpecBinder Blog</subtitle>
-    <icon>https://dmytro-stasyuk.github.io/spec-binder-website-public/img/favicon.ico</icon>
+    <icon>https://specbinder.dev/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome to the SpecBinder Blog]]></title>
-        <id>https://dmytro-stasyuk.github.io/spec-binder-website-public/blog/welcome</id>
-        <link href="https://dmytro-stasyuk.github.io/spec-binder-website-public/blog/welcome"/>
+        <id>https://specbinder.dev/blog/welcome</id>
+        <link href="https://specbinder.dev/blog/welcome"/>
         <updated>2026-03-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Welcome to the SpecBinder blog! We'll be sharing updates, tips, and tutorials about SpecBinder here.]]></summary>
         <content type="html"><![CDATA[<p>Welcome to the SpecBinder blog! We'll be sharing updates, tips, and tutorials about SpecBinder here.</p>

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkspec_binder_website=globalThis.webpackChunkspec_binder_website||[]).push([[472],{5513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome to the SpecBinder Blog","permalink":"/blog/welcome","unlisted":false,"date":"2026-03-11T00:00:00.000Z"}]}')}}]);

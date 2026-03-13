@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkspec_binder_website=globalThis.webpackChunkspec_binder_website||[]).push([[903],{1912(e){e.exports=JSON.parse('{"blogBasePath":"/spec-binder-website-public/blog","blogTitle":"Blog","authorsListPath":"/spec-binder-website-public/blog/authors"}')}}]);
