@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkspec_binder_website=globalThis.webpackChunkspec_binder_website||[]).push([[938],{5611(e){e.exports=JSON.parse('{"metadata":{"permalink":"/spec-binder-website-public/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

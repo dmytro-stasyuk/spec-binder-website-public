@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>SpecBinder Blog</title>
+        <link>https://dmytro-stasyuk.github.io/spec-binder-website-public/blog</link>
+        <description>SpecBinder Blog</description>
+        <lastBuildDate>Wed, 11 Mar 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Welcome to the SpecBinder Blog]]></title>
+            <link>https://dmytro-stasyuk.github.io/spec-binder-website-public/blog/welcome</link>
+            <guid>https://dmytro-stasyuk.github.io/spec-binder-website-public/blog/welcome</guid>
+            <pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to the SpecBinder blog! We'll be sharing updates, tips, and tutorials about SpecBinder here.]]></description>
+            <content:encoded><![CDATA[<p>Welcome to the SpecBinder blog! We'll be sharing updates, tips, and tutorials about SpecBinder here.</p>
+<p>Stay tuned for posts about:</p>
+<ul>
+<li class="">New releases and features</li>
+<li class="">Best practices for writing Gherkin specifications with SpecBinder</li>
+<li class="">Tips for getting the most out of the IntelliJ plugin</li>
+<li class="">Migration guides from Cucumber to SpecBinder</li>
+</ul>]]></content:encoded>
+            <category>announcement</category>
+        </item>
+    </channel>
+</rss>
