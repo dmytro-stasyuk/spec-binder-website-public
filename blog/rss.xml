@@ -13,14 +13,13 @@
             <link>https://specbinder.dev/blog/welcome</link>
             <guid>https://specbinder.dev/blog/welcome</guid>
             <pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Welcome to the SpecBinder blog! We'll be sharing updates, tips, and tutorials about SpecBinder here.]]></description>
-            <content:encoded><![CDATA[<p>Welcome to the SpecBinder blog! We'll be sharing updates, tips, and tutorials about SpecBinder here.</p>
+            <description><![CDATA[Welcome to the SpecBinder blog! A place for updates, tips, and tutorials about SpecBinder.]]></description>
+            <content:encoded><![CDATA[<p>Welcome to the SpecBinder blog! A place for updates, tips, and tutorials about SpecBinder.</p>
 <p>Stay tuned for posts about:</p>
 <ul>
 <li class="">New releases and features</li>
 <li class="">Best practices for writing Gherkin specifications with SpecBinder</li>
 <li class="">Tips for getting the most out of the IntelliJ plugin</li>
-<li class="">Migration guides from Cucumber to SpecBinder</li>
 </ul>]]></content:encoded>
             <category>announcement</category>
         </item>

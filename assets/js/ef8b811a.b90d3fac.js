@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkspec_binder_website=globalThis.webpackChunkspec_binder_website||[]).push([[947],{6600(e){e.exports=JSON.parse('{"authors":[{"name":"SpecBinder Team","url":"https://github.com/dmytro-stasyuk","key":"specbinder","page":null,"count":1}]}')}}]);

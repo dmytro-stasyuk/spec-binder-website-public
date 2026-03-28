@@ -12,18 +12,17 @@
         <id>https://specbinder.dev/blog/welcome</id>
         <link href="https://specbinder.dev/blog/welcome"/>
         <updated>2026-03-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Welcome to the SpecBinder blog! We'll be sharing updates, tips, and tutorials about SpecBinder here.]]></summary>
-        <content type="html"><![CDATA[<p>Welcome to the SpecBinder blog! We'll be sharing updates, tips, and tutorials about SpecBinder here.</p>
+        <summary type="html"><![CDATA[Welcome to the SpecBinder blog! A place for updates, tips, and tutorials about SpecBinder.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to the SpecBinder blog! A place for updates, tips, and tutorials about SpecBinder.</p>
 <p>Stay tuned for posts about:</p>
 <ul>
 <li class="">New releases and features</li>
 <li class="">Best practices for writing Gherkin specifications with SpecBinder</li>
 <li class="">Tips for getting the most out of the IntelliJ plugin</li>
-<li class="">Migration guides from Cucumber to SpecBinder</li>
 </ul>]]></content>
         <author>
-            <name>SpecBinder Team</name>
-            <uri>https://github.com/dmytro-stasyuk</uri>
+            <name>Dmytro Stasyuk</name>
+            <uri>https://www.linkedin.com/in/dmytrostasyuk/</uri>
         </author>
         <category label="announcement" term="announcement"/>
     </entry>
