@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://specbinder.dev/blog"/>
     <subtitle>SpecBinder Blog</subtitle>
-    <icon>https://specbinder.dev/img/favicon.ico</icon>
+    <icon>https://specbinder.dev/img/favicon.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome to the SpecBinder Blog]]></title>
         <id>https://specbinder.dev/blog/welcome</id>
