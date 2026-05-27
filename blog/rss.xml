@@ -4,24 +4,105 @@
         <title>SpecBinder Blog</title>
         <link>https://specbinder.dev/blog</link>
         <description>SpecBinder Blog</description>
-        <lastBuildDate>Wed, 11 Mar 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 23 May 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[Welcome to the SpecBinder Blog]]></title>
-            <link>https://specbinder.dev/blog/welcome</link>
-            <guid>https://specbinder.dev/blog/welcome</guid>
-            <pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Welcome to the SpecBinder blog! A place for updates, tips, and tutorials about SpecBinder.]]></description>
-            <content:encoded><![CDATA[<p>Welcome to the SpecBinder blog! A place for updates, tips, and tutorials about SpecBinder.</p>
-<p>Stay tuned for posts about:</p>
+            <title><![CDATA[Rethinking BDD automation with SpecBinder]]></title>
+            <link>https://specbinder.dev/blog/introducing-specbinder</link>
+            <guid>https://specbinder.dev/blog/introducing-specbinder</guid>
+            <pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[a compile-time bridge between Gherkin and Java]]></description>
+            <content:encoded><![CDATA[<p><em><strong>a compile-time bridge between Gherkin and Java</strong></em></p>
+<p>Behavior-Driven Development (BDD) has always promised something powerful:
+<strong>readable specifications that double as executable tests.</strong></p>
+<p>At its core, BDD is a collaborative process — conversations, examples, shared understanding. Gherkin — a simple language for describing system behavior in Given/When/Then scenarios — plays a key role in that process by capturing those examples in a structured yet readable way.</p>
+<p>The closing step of BDD process is automation — turning those same examples into executable tests.&nbsp;Tools like Cucumber, JBehave, and Reqnroll are commonly used for this.</p>
+<p>These tools parse the Gherkin text and use pattern (often regular expression) matching to bind each step to executable “glue” code. It’s simple to set up and works well at first—but as the solution grows, familiar challenges start to appear:</p>
 <ul>
-<li class="">New releases and features</li>
-<li class="">Best practices for writing Gherkin specifications with SpecBinder</li>
-<li class="">Tips for getting the most out of the IntelliJ plugin</li>
+<li class="">
+<p>Step definitions accumulate and become harder to reason about</p>
+</li>
+<li class="">
+<p>Similar steps appear in slightly different forms</p>
+</li>
+<li class="">
+<p>Overlapping steps make behavior harder to predict</p>
+</li>
+<li class="">
+<p>Changes can impact seemingly unrelated scenarios</p>
+</li>
+<li class="">
+<p>It becomes harder to understand what actually executes</p>
+</li>
+</ul>
+<p>What starts as clarity at the specification level often becomes indirection, fragility, and delayed feedback at the automation layer.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-if-gherkin-was-processed-at-compile-time">What if Gherkin was processed at compile time?<a href="https://specbinder.dev/blog/introducing-specbinder#what-if-gherkin-was-processed-at-compile-time" class="hash-link" aria-label="Direct link to What if Gherkin was processed at compile time?" title="Direct link to What if Gherkin was processed at compile time?" translate="no">​</a></h2>
+<p>SpecBinder takes a different approach.</p>
+<p>Instead of interpreting Gherkin at runtime, SpecBinder processes it during compilation — generating real JUnit tests from your scenarios.</p>
+<p>Each scenario becomes a proper test.
+Each step becomes a strongly-typed method call.</p>
+<p>No runtime binding. No surprises.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-this-changes-things">Why this changes things<a href="https://specbinder.dev/blog/introducing-specbinder#why-this-changes-things" class="hash-link" aria-label="Direct link to Why this changes things" title="Direct link to Why this changes things" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-errors-surface-earlier">1. Errors surface earlier<a href="https://specbinder.dev/blog/introducing-specbinder#1-errors-surface-earlier" class="hash-link" aria-label="Direct link to 1. Errors surface earlier" title="Direct link to 1. Errors surface earlier" translate="no">​</a></h3>
+<p>With traditional approaches, many issues only appear when tests are executed.</p>
+<p>With SpecBinder, problems are caught during compilation:</p>
+<ul>
+<li class="">Mismatch in structure? ❌ Compile error</li>
+<li class="">Wrong parameter type? ❌ Compile error</li>
+<li class="">Missing step implementation? ❌ Failing stub by default (optionally a compile error)</li>
+</ul>
+<p>You fix issues before you even run the tests.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-real-tests-not-indirect-execution">2. Real tests, not indirect execution<a href="https://specbinder.dev/blog/introducing-specbinder#2-real-tests-not-indirect-execution" class="hash-link" aria-label="Direct link to 2. Real tests, not indirect execution" title="Direct link to 2. Real tests, not indirect execution" translate="no">​</a></h3>
+<p>SpecBinder generates standard JUnit 5 tests.</p>
+<p>That means:</p>
+<ul>
+<li class="">Run scenarios directly from your IDE</li>
+<li class="">Debug like any other test</li>
+<li class="">Use "Find Usages" on step methods with compiler-guaranteed references</li>
+<li class="">No additional runtime layer to reason about</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-simpler-state-management">3. Simpler state management<a href="https://specbinder.dev/blog/introducing-specbinder#3-simpler-state-management" class="hash-link" aria-label="Direct link to 3. Simpler state management" title="Direct link to 3. Simpler state management" translate="no">​</a></h3>
+<p>Because scenarios are transformed into plain JUnit tests:</p>
+<ul>
+<li class="">Step implementations are regular instance methods on your test class, created and disposed along with the test instance by JUnit&nbsp;</li>
+<li class="">State can be shared using simple instance fields on the test class</li>
+<li class="">No need for additional dependency injection frameworks or context management to coordinate state between steps</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-easy-integration-into-existing-tests">4. Easy integration into existing tests<a href="https://specbinder.dev/blog/introducing-specbinder#4-easy-integration-into-existing-tests" class="hash-link" aria-label="Direct link to 4. Easy integration into existing tests" title="Direct link to 4. Easy integration into existing tests" translate="no">​</a></h3>
+<p>SpecBinder focuses only on mapping Gherkin to equivalent Java code — no more, no less.</p>
+<ul>
+<li class="">Your step implementations continue to provide the actual behaviour</li>
+<li class="">Core JUnit capabilities can be used to group, filter, parallelize, and organize your tests</li>
+<li class="">Gherkin can be introduced incrementally, without restructuring your existing test suite</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bridging-specifications-and-code">Bridging specifications and code<a href="https://specbinder.dev/blog/introducing-specbinder#bridging-specifications-and-code" class="hash-link" aria-label="Direct link to Bridging specifications and code" title="Direct link to Bridging specifications and code" translate="no">​</a></h2>
+<p>BDD aims to connect business and engineering through shared understanding.</p>
+<p>SpecBinder strengthens the automation side of that bridge:</p>
+<ul>
+<li class="">Gherkin remains readable and collaborative</li>
+<li class="">Tests become compile-time safe and IDE-friendly</li>
+<li class="">The gap between specification and execution becomes much smaller</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="final-thought">Final thought<a href="https://specbinder.dev/blog/introducing-specbinder#final-thought" class="hash-link" aria-label="Direct link to Final thought" title="Direct link to Final thought" translate="no">​</a></h2>
+<p>Gherkin doesn’t need to change.</p>
+<p>But how it’s executed can.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learn-more">Learn more<a href="https://specbinder.dev/blog/introducing-specbinder#learn-more" class="hash-link" aria-label="Direct link to Learn more" title="Direct link to Learn more" translate="no">​</a></h2>
+<ul>
+<li class="">Website: <a href="https://specbinder.dev/" target="_blank" rel="noopener noreferrer" class="">https://specbinder.dev</a></li>
+<li class="">GitHub repository: <a href="https://github.com/dmytro-stasyuk/SpecBinder" target="_blank" rel="noopener noreferrer" class="">https://github.com/dmytro-stasyuk/SpecBinder</a></li>
 </ul>]]></content:encoded>
             <category>announcement</category>
+            <category>introduction</category>
         </item>
     </channel>
 </rss>
