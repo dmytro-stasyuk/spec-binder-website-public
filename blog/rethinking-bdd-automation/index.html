@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="blog-wrapper blog-post-page plugin-blog plugin-id-default" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Rethinking BDD automation with SpecBinder | SpecBinder</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://specbinder.dev/img/specbinder-social-card.png"><meta data-rh="true" name="twitter:image" content="https://specbinder.dev/img/specbinder-social-card.png"><meta data-rh="true" property="og:url" content="https://specbinder.dev/blog/rethinking-bdd-automation"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Rethinking BDD automation with SpecBinder | SpecBinder"><meta data-rh="true" name="description" content="a compile-time bridge between Gherkin and Java"><meta data-rh="true" property="og:description" content="a compile-time bridge between Gherkin and Java"><meta data-rh="true" property="og:type" content="article"><meta data-rh="true" property="article:published_time" content="2026-05-23T00:00:00.000Z"><meta data-rh="true" property="article:author" content="https://www.linkedin.com/in/dmytrostasyuk/"><meta data-rh="true" property="article:tag" content="announcement,introduction"><link data-rh="true" rel="icon" href="/img/favicon.png"><link data-rh="true" rel="canonical" href="https://specbinder.dev/blog/rethinking-bdd-automation"><link data-rh="true" rel="alternate" href="https://specbinder.dev/blog/rethinking-bdd-automation" hreflang="en"><link data-rh="true" rel="alternate" href="https://specbinder.dev/blog/rethinking-bdd-automation" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://specbinder.dev/blog/rethinking-bdd-automation","mainEntityOfPage":"https://specbinder.dev/blog/rethinking-bdd-automation","url":"https://specbinder.dev/blog/rethinking-bdd-automation","headline":"Rethinking BDD automation with SpecBinder","name":"Rethinking BDD automation with SpecBinder","description":"a compile-time bridge between Gherkin and Java","datePublished":"2026-05-23T00:00:00.000Z","author":{"@type":"Person","name":"Dmytro Stasyuk","description":"SpecBinder author","url":"https://www.linkedin.com/in/dmytrostasyuk/","image":"https://github.com/dmytro-stasyuk.png"},"keywords":[],"isPartOf":{"@type":"Blog","@id":"https://specbinder.dev/blog","name":"Blog"}}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="SpecBinder RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="SpecBinder Atom Feed">
+
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PC70DW8EM7"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-PC70DW8EM7",{})</script><link rel="stylesheet" href="/assets/css/styles.7f94d5bb.css">
+<script src="/assets/js/runtime~main.78eb4df2.js" defer="defer"></script>
+<script src="/assets/js/main.037a7b18.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-choice","light"),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.png"><link rel="preload" as="image" href="https://github.com/dmytro-stasyuk.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="SpecBinder Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="SpecBinder Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SpecBinder</b></a><a class="navbar__item navbar__link" href="/why/why-compile-time-gherkin">Why</a><a class="navbar__item navbar__link" href="/docs/getting-started">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/dmytro-stasyuk/spec-binder" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://plugins.jetbrains.com/plugin/30540" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">IDE Plugin<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><aside class="col col--3"><nav class="sidebar_re4s thin-scrollbar" aria-label="Blog recent posts navigation"><div class="sidebarItemTitle_pO2u margin-bottom--md">Recent posts</div><div role="group"><h3 class="yearGroupHeading_rMGB">2026</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a aria-current="page" class="sidebarItemLink_mo7H sidebarItemLinkActive_I1ZP" href="/blog/rethinking-bdd-automation">Rethinking BDD automation with SpecBinder</a></li></ul></div></nav></aside><main class="col col--7"><article class=""><header><h1 class="title_f1Hy">Rethinking BDD automation with SpecBinder</h1><div class="container_mt6G margin-vert--md"><time datetime="2026-05-23T00:00:00.000Z">May 23, 2026</time> · <!-- -->3 min read</div></header><div id="__blog-post-container" class="markdown"><p><em><strong>a compile-time bridge between Gherkin and Java</strong></em></p>
+<p>Behavior-Driven Development (BDD) has always promised something powerful:
+<strong>readable specifications that double as executable tests.</strong></p>
+<p>At its core, BDD is a collaborative process — conversations, examples, shared understanding. Gherkin — a simple language for describing system behavior in Given/When/Then scenarios — plays a key role in that process by capturing those examples in a structured yet readable way.</p>
+<p>The closing step of BDD process is automation — turning those same examples into executable tests. Tools like Cucumber, JBehave, and Reqnroll are commonly used for this.</p>
+<p>These tools parse the Gherkin text and use pattern (often regular expression) matching to bind each step to executable “glue” code. It’s simple to set up and works well at first—but as the solution grows, familiar challenges start to appear:</p>
+<ul>
+<li class="">
+<p>Step definitions accumulate and become harder to reason about</p>
+</li>
+<li class="">
+<p>Similar steps appear in slightly different forms</p>
+</li>
+<li class="">
+<p>Overlapping steps make behavior harder to predict</p>
+</li>
+<li class="">
+<p>Changes can impact seemingly unrelated scenarios</p>
+</li>
+<li class="">
+<p>It becomes harder to understand what actually executes</p>
+</li>
+</ul>
+<p>What starts as clarity at the specification level often becomes indirection, fragility, and delayed feedback at the automation layer.</p>
+<p><img decoding="async" loading="lazy" alt="img_7.png" src="/assets/images/img_7-d66363cb429555e05875cbc3366758df.png" width="1257" height="560" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-if-gherkin-was-processed-at-compile-time">What if Gherkin was processed at compile time?<a href="#what-if-gherkin-was-processed-at-compile-time" class="hash-link" aria-label="Direct link to What if Gherkin was processed at compile time?" title="Direct link to What if Gherkin was processed at compile time?" translate="no">​</a></h2>
+<p>SpecBinder takes a different approach.</p>
+<p>Instead of interpreting Gherkin at runtime, SpecBinder processes it during compilation — generating real JUnit tests from your scenarios.</p>
+<p>Each scenario becomes a proper test.
+Each step becomes a strongly-typed method call.</p>
+<p>No runtime binding. No surprises.</p>
+<p><img decoding="async" loading="lazy" alt="img_12.png" src="/assets/images/img_12-e29108e8fc1b603e747c279f4ba4e28f.png" width="1252" height="451" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-this-changes-things">Why this changes things<a href="#why-this-changes-things" class="hash-link" aria-label="Direct link to Why this changes things" title="Direct link to Why this changes things" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-errors-surface-earlier">1. Errors surface earlier<a href="#1-errors-surface-earlier" class="hash-link" aria-label="Direct link to 1. Errors surface earlier" title="Direct link to 1. Errors surface earlier" translate="no">​</a></h3>
+<p>With traditional approaches, many issues only appear when tests are executed.</p>
+<p>With SpecBinder, problems are caught during compilation:</p>
+<ul>
+<li class="">Mismatch in structure? ❌ Compile error</li>
+<li class="">Wrong parameter type? ❌ Compile error</li>
+<li class="">Missing step implementation? ❌ Compile error by default (optionally a failing stub)</li>
+</ul>
+<p>You fix issues before you even run the tests.</p>
+<p><img decoding="async" loading="lazy" alt="img_8.png" src="/assets/images/img_8-58a42e45b142446769e8ee1d3d049d4f.png" width="1254" height="588" class="img_ev3q"></p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-real-tests-not-indirect-execution">2. Real tests, not indirect execution<a href="#2-real-tests-not-indirect-execution" class="hash-link" aria-label="Direct link to 2. Real tests, not indirect execution" title="Direct link to 2. Real tests, not indirect execution" translate="no">​</a></h3>
+<p>SpecBinder generates standard JUnit 5 tests.</p>
+<p>That means:</p>
+<ul>
+<li class="">Run scenarios directly from your IDE</li>
+<li class="">Debug like any other test</li>
+<li class="">Use &quot;Find Usages&quot; on step methods with compiler-guaranteed references</li>
+<li class="">No additional runtime layer to reason about</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="img_13.png" src="/assets/images/img_13-f858cb9e6023b2beb6d5531565108923.png" width="1236" height="603" class="img_ev3q"></p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-simpler-state-management">3. Simpler state management<a href="#3-simpler-state-management" class="hash-link" aria-label="Direct link to 3. Simpler state management" title="Direct link to 3. Simpler state management" translate="no">​</a></h3>
+<p>Because scenarios are transformed into plain JUnit tests:</p>
+<ul>
+<li class="">Step implementations are regular instance methods on your test class, created and disposed along with the test instance by JUnit </li>
+<li class="">State can be shared using simple instance fields on the test class</li>
+<li class="">No need for additional dependency injection frameworks or context management to coordinate state between steps</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="img_9.png" src="/assets/images/img_9-c6c2372777592d0ec36ad3d553aa91e1.png" width="1274" height="569" class="img_ev3q"></p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-easy-integration-into-existing-tests">4. Easy integration into existing tests<a href="#4-easy-integration-into-existing-tests" class="hash-link" aria-label="Direct link to 4. Easy integration into existing tests" title="Direct link to 4. Easy integration into existing tests" translate="no">​</a></h3>
+<p>SpecBinder focuses only on mapping Gherkin to equivalent Java code — no more, no less.</p>
+<ul>
+<li class="">Your step implementations continue to provide the actual behaviour</li>
+<li class="">Core JUnit capabilities can be used to group, filter, parallelize, and organize your tests</li>
+<li class="">Gherkin can be introduced incrementally, without restructuring your existing test suite</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="img_14.png" src="/assets/images/img_14-a148be05bbce9999645d0b41cc6770ed.png" width="1237" height="693" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bridging-specifications-and-code">Bridging specifications and code<a href="#bridging-specifications-and-code" class="hash-link" aria-label="Direct link to Bridging specifications and code" title="Direct link to Bridging specifications and code" translate="no">​</a></h2>
+<p>BDD aims to connect business and engineering through shared understanding.</p>
+<p>SpecBinder strengthens the automation side of that bridge:</p>
+<ul>
+<li class="">Gherkin remains readable and collaborative</li>
+<li class="">Tests become compile-time safe and IDE-friendly</li>
+<li class="">The gap between specification and execution becomes much smaller</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="img.png" src="/assets/images/img-854dfcff4d516e412f8a736770e18066.png" width="1498" height="757" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="final-thought">Final thought<a href="#final-thought" class="hash-link" aria-label="Direct link to Final thought" title="Direct link to Final thought" translate="no">​</a></h2>
+<p>Gherkin doesn’t need to change.</p>
+<p>But how it’s executed can.</p>
+<p><img decoding="async" loading="lazy" alt="img_1.png" src="/assets/images/img_1-e3718d46dd7d0fb822e9ed02d14d3e3f.png" width="1250" height="558" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learn-more">Learn more<a href="#learn-more" class="hash-link" aria-label="Direct link to Learn more" title="Direct link to Learn more" translate="no">​</a></h2>
+<ul>
+<li class="">Website: <a href="https://specbinder.dev" target="_blank" rel="noopener noreferrer" class="">https://specbinder.dev</a></li>
+<li class="">GitHub repository: <a href="https://github.com/dmytro-stasyuk/SpecBinder" target="_blank" rel="noopener noreferrer" class="">https://github.com/dmytro-stasyuk/SpecBinder</a></li>
+</ul></div><footer class="docusaurus-mt-lg"><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/blog/tags/announcement">announcement</a></li><li class="tag_QGVx"><a rel="tag" class="tag_zVej tagRegular_sFm0" href="/blog/tags/introduction">introduction</a></li></ul></div></div><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/dmytro-stasyuk/spec-binder-website/tree/main/blog/2026-05-23-rethinking-bdd-automation/index.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><div style="margin-top:2rem"><div style="border:1px solid var(--ifm-color-emphasis-300);border-radius:12px;padding:1.25rem 1.5rem;background:var(--ifm-card-background-color)"><div style="font-size:0.7rem;font-weight:700;color:var(--ifm-color-emphasis-700);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem">About the <!-- -->author</div><div style="display:flex;flex-direction:column;gap:1rem"><div style="display:flex;align-items:center;gap:1rem"><img src="https://github.com/dmytro-stasyuk.png" alt="Dmytro Stasyuk" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0"><div><div style="font-weight:700;font-size:1rem"><a href="https://www.linkedin.com/in/dmytrostasyuk/">Dmytro Stasyuk</a></div><div style="font-size:0.85rem;color:var(--ifm-color-emphasis-700)">SpecBinder author</div></div></div></div></div></div><div style="margin-top:2rem"></div></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#what-if-gherkin-was-processed-at-compile-time" class="table-of-contents__link toc-highlight">What if Gherkin was processed at compile time?</a></li><li><a href="#why-this-changes-things" class="table-of-contents__link toc-highlight">Why this changes things</a><ul><li><a href="#1-errors-surface-earlier" class="table-of-contents__link toc-highlight">1. Errors surface earlier</a></li><li><a href="#2-real-tests-not-indirect-execution" class="table-of-contents__link toc-highlight">2. Real tests, not indirect execution</a></li><li><a href="#3-simpler-state-management" class="table-of-contents__link toc-highlight">3. Simpler state management</a></li><li><a href="#4-easy-integration-into-existing-tests" class="table-of-contents__link toc-highlight">4. Easy integration into existing tests</a></li></ul></li><li><a href="#bridging-specifications-and-code" class="table-of-contents__link toc-highlight">Bridging specifications and code</a></li><li><a href="#final-thought" class="table-of-contents__link toc-highlight">Final thought</a></li><li><a href="#learn-more" class="table-of-contents__link toc-highlight">Learn more</a></li></ul></div></div></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/users/dmytro-stasyuk/projects/1/views/1?layout=table" target="_blank" rel="noopener noreferrer" class="footer__link-item">Issue tracker<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://central.sonatype.com/artifact/dev.specbinder/annotation-processor" target="_blank" rel="noopener noreferrer" class="footer__link-item">Maven Central artifact<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2026 Dmytro Stasyuk. SpecBinder™ is open source under the GPL-3.0 license.</div></div></div></footer></div>
+</body>
+</html>

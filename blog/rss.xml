@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Rethinking BDD automation with SpecBinder]]></title>
-            <link>https://specbinder.dev/blog/introducing-specbinder</link>
-            <guid>https://specbinder.dev/blog/introducing-specbinder</guid>
+            <link>https://specbinder.dev/blog/rethinking-bdd-automation</link>
+            <guid>https://specbinder.dev/blog/rethinking-bdd-automation</guid>
             <pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[a compile-time bridge between Gherkin and Java]]></description>
             <content:encoded><![CDATA[<p><em><strong>a compile-time bridge between Gherkin and Java</strong></em></p>
@@ -40,7 +40,7 @@
 <p>What starts as clarity at the specification level often becomes indirection, fragility, and delayed feedback at the automation layer.</p>
 <p><img decoding="async" loading="lazy" alt="img_7.png" src="https://specbinder.dev/assets/images/img_7-d66363cb429555e05875cbc3366758df.png" width="1257" height="560" class="img_ev3q"></p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-if-gherkin-was-processed-at-compile-time">What if Gherkin was processed at compile time?<a href="https://specbinder.dev/blog/introducing-specbinder#what-if-gherkin-was-processed-at-compile-time" class="hash-link" aria-label="Direct link to What if Gherkin was processed at compile time?" title="Direct link to What if Gherkin was processed at compile time?" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-if-gherkin-was-processed-at-compile-time">What if Gherkin was processed at compile time?<a href="https://specbinder.dev/blog/rethinking-bdd-automation#what-if-gherkin-was-processed-at-compile-time" class="hash-link" aria-label="Direct link to What if Gherkin was processed at compile time?" title="Direct link to What if Gherkin was processed at compile time?" translate="no">​</a></h2>
 <p>SpecBinder takes a different approach.</p>
 <p>Instead of interpreting Gherkin at runtime, SpecBinder processes it during compilation — generating real JUnit tests from your scenarios.</p>
 <p>Each scenario becomes a proper test.
@@ -48,8 +48,8 @@ Each step becomes a strongly-typed method call.</p>
 <p>No runtime binding. No surprises.</p>
 <p><img decoding="async" loading="lazy" alt="img_12.png" src="https://specbinder.dev/assets/images/img_12-e29108e8fc1b603e747c279f4ba4e28f.png" width="1252" height="451" class="img_ev3q"></p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-this-changes-things">Why this changes things<a href="https://specbinder.dev/blog/introducing-specbinder#why-this-changes-things" class="hash-link" aria-label="Direct link to Why this changes things" title="Direct link to Why this changes things" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-errors-surface-earlier">1. Errors surface earlier<a href="https://specbinder.dev/blog/introducing-specbinder#1-errors-surface-earlier" class="hash-link" aria-label="Direct link to 1. Errors surface earlier" title="Direct link to 1. Errors surface earlier" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-this-changes-things">Why this changes things<a href="https://specbinder.dev/blog/rethinking-bdd-automation#why-this-changes-things" class="hash-link" aria-label="Direct link to Why this changes things" title="Direct link to Why this changes things" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-errors-surface-earlier">1. Errors surface earlier<a href="https://specbinder.dev/blog/rethinking-bdd-automation#1-errors-surface-earlier" class="hash-link" aria-label="Direct link to 1. Errors surface earlier" title="Direct link to 1. Errors surface earlier" translate="no">​</a></h3>
 <p>With traditional approaches, many issues only appear when tests are executed.</p>
 <p>With SpecBinder, problems are caught during compilation:</p>
 <ul>
@@ -60,7 +60,7 @@ Each step becomes a strongly-typed method call.</p>
 <p>You fix issues before you even run the tests.</p>
 <p><img decoding="async" loading="lazy" alt="img_8.png" src="https://specbinder.dev/assets/images/img_8-58a42e45b142446769e8ee1d3d049d4f.png" width="1254" height="588" class="img_ev3q"></p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-real-tests-not-indirect-execution">2. Real tests, not indirect execution<a href="https://specbinder.dev/blog/introducing-specbinder#2-real-tests-not-indirect-execution" class="hash-link" aria-label="Direct link to 2. Real tests, not indirect execution" title="Direct link to 2. Real tests, not indirect execution" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-real-tests-not-indirect-execution">2. Real tests, not indirect execution<a href="https://specbinder.dev/blog/rethinking-bdd-automation#2-real-tests-not-indirect-execution" class="hash-link" aria-label="Direct link to 2. Real tests, not indirect execution" title="Direct link to 2. Real tests, not indirect execution" translate="no">​</a></h3>
 <p>SpecBinder generates standard JUnit 5 tests.</p>
 <p>That means:</p>
 <ul>
@@ -71,7 +71,7 @@ Each step becomes a strongly-typed method call.</p>
 </ul>
 <p><img decoding="async" loading="lazy" alt="img_13.png" src="https://specbinder.dev/assets/images/img_13-f858cb9e6023b2beb6d5531565108923.png" width="1236" height="603" class="img_ev3q"></p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-simpler-state-management">3. Simpler state management<a href="https://specbinder.dev/blog/introducing-specbinder#3-simpler-state-management" class="hash-link" aria-label="Direct link to 3. Simpler state management" title="Direct link to 3. Simpler state management" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-simpler-state-management">3. Simpler state management<a href="https://specbinder.dev/blog/rethinking-bdd-automation#3-simpler-state-management" class="hash-link" aria-label="Direct link to 3. Simpler state management" title="Direct link to 3. Simpler state management" translate="no">​</a></h3>
 <p>Because scenarios are transformed into plain JUnit tests:</p>
 <ul>
 <li class="">Step implementations are regular instance methods on your test class, created and disposed along with the test instance by JUnit&nbsp;</li>
@@ -80,7 +80,7 @@ Each step becomes a strongly-typed method call.</p>
 </ul>
 <p><img decoding="async" loading="lazy" alt="img_9.png" src="https://specbinder.dev/assets/images/img_9-c6c2372777592d0ec36ad3d553aa91e1.png" width="1274" height="569" class="img_ev3q"></p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-easy-integration-into-existing-tests">4. Easy integration into existing tests<a href="https://specbinder.dev/blog/introducing-specbinder#4-easy-integration-into-existing-tests" class="hash-link" aria-label="Direct link to 4. Easy integration into existing tests" title="Direct link to 4. Easy integration into existing tests" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-easy-integration-into-existing-tests">4. Easy integration into existing tests<a href="https://specbinder.dev/blog/rethinking-bdd-automation#4-easy-integration-into-existing-tests" class="hash-link" aria-label="Direct link to 4. Easy integration into existing tests" title="Direct link to 4. Easy integration into existing tests" translate="no">​</a></h3>
 <p>SpecBinder focuses only on mapping Gherkin to equivalent Java code — no more, no less.</p>
 <ul>
 <li class="">Your step implementations continue to provide the actual behaviour</li>
@@ -89,7 +89,7 @@ Each step becomes a strongly-typed method call.</p>
 </ul>
 <p><img decoding="async" loading="lazy" alt="img_14.png" src="https://specbinder.dev/assets/images/img_14-a148be05bbce9999645d0b41cc6770ed.png" width="1237" height="693" class="img_ev3q"></p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bridging-specifications-and-code">Bridging specifications and code<a href="https://specbinder.dev/blog/introducing-specbinder#bridging-specifications-and-code" class="hash-link" aria-label="Direct link to Bridging specifications and code" title="Direct link to Bridging specifications and code" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bridging-specifications-and-code">Bridging specifications and code<a href="https://specbinder.dev/blog/rethinking-bdd-automation#bridging-specifications-and-code" class="hash-link" aria-label="Direct link to Bridging specifications and code" title="Direct link to Bridging specifications and code" translate="no">​</a></h2>
 <p>BDD aims to connect business and engineering through shared understanding.</p>
 <p>SpecBinder strengthens the automation side of that bridge:</p>
 <ul>
@@ -99,12 +99,12 @@ Each step becomes a strongly-typed method call.</p>
 </ul>
 <p><img decoding="async" loading="lazy" alt="img.png" src="https://specbinder.dev/assets/images/img-854dfcff4d516e412f8a736770e18066.png" width="1498" height="757" class="img_ev3q"></p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="final-thought">Final thought<a href="https://specbinder.dev/blog/introducing-specbinder#final-thought" class="hash-link" aria-label="Direct link to Final thought" title="Direct link to Final thought" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="final-thought">Final thought<a href="https://specbinder.dev/blog/rethinking-bdd-automation#final-thought" class="hash-link" aria-label="Direct link to Final thought" title="Direct link to Final thought" translate="no">​</a></h2>
 <p>Gherkin doesn’t need to change.</p>
 <p>But how it’s executed can.</p>
 <p><img decoding="async" loading="lazy" alt="img_1.png" src="https://specbinder.dev/assets/images/img_1-e3718d46dd7d0fb822e9ed02d14d3e3f.png" width="1250" height="558" class="img_ev3q"></p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learn-more">Learn more<a href="https://specbinder.dev/blog/introducing-specbinder#learn-more" class="hash-link" aria-label="Direct link to Learn more" title="Direct link to Learn more" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learn-more">Learn more<a href="https://specbinder.dev/blog/rethinking-bdd-automation#learn-more" class="hash-link" aria-label="Direct link to Learn more" title="Direct link to Learn more" translate="no">​</a></h2>
 <ul>
 <li class="">Website: <a href="https://specbinder.dev/" target="_blank" rel="noopener noreferrer" class="">https://specbinder.dev</a></li>
 <li class="">GitHub repository: <a href="https://github.com/dmytro-stasyuk/SpecBinder" target="_blank" rel="noopener noreferrer" class="">https://github.com/dmytro-stasyuk/SpecBinder</a></li>
