@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC70DW8EM7"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-PC70DW8EM7",{})</script><link rel="stylesheet" href="/assets/css/styles.7f94d5bb.css">
-<script src="/assets/js/runtime~main.78eb4df2.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.163bf02a.js" defer="defer"></script>
 <script src="/assets/js/main.037a7b18.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -43,8 +43,8 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="marker-class-lookup">Marker class lookup<a href="#marker-class-lookup" class="hash-link" aria-label="Direct link to Marker class lookup" title="Direct link to Marker class lookup" translate="no">​</a></h2>
 <p>For every step the generator processes, it first searches the marker class hierarchy for an existing implementation:</p>
 <ol>
-<li class="">By <strong>annotation pattern</strong> (Cucumber <code>@Given</code> / <code>@When</code> / <code>@Then</code> annotations on parent methods) — when <code>useCucumberAnnotationsForStepMatching = true</code>, which is the default</li>
 <li class="">By <strong>method name</strong> — derived as above</li>
+<li class="">By <strong>annotation pattern</strong> (Cucumber <code>@Given</code> / <code>@When</code> / <code>@Then</code> annotations on parent methods) — when <code>useCucumberAnnotationsForStepMatching = true</code>, which is turned on by default for backward compatibility when migration from cucumber based projects</li>
 </ol>
 <p>If a match is found, no abstract declaration (or stub) is emitted for that step. The generated <code>@Test</code> method simply calls the inherited implementation.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See also<a href="#see-also" class="hash-link" aria-label="Direct link to See also" title="Direct link to See also" translate="no">​</a></h2>
