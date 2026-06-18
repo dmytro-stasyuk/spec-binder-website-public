@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkspec_binder_website=globalThis.webpackChunkspec_binder_website||[]).push([[7472],{5513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Rethinking BDD automation with SpecBinder","permalink":"/blog/rethinking-bdd-automation","unlisted":false,"date":"2026-05-23T00:00:00.000Z"}]}')}}]);
