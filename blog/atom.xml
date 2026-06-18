@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://specbinder.dev/blog"/>
     <subtitle>SpecBinder Blog</subtitle>
-    <icon>https://specbinder.dev/img/favicon.png</icon>
+    <icon>https://specbinder.dev/img/logo.svg</icon>
     <entry>
         <title type="html"><![CDATA[When Specs Need More Than Prose]]></title>
         <id>https://specbinder.dev/blog/when-specs-need-more-than-prose</id>
