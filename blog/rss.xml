@@ -9,12 +9,12 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[When Specs Need More Than Prose]]></title>
+            <title><![CDATA[When Specifications Need More Than Prose]]></title>
             <link>https://specbinder.dev/blog/when-specs-need-more-than-prose</link>
             <guid>https://specbinder.dev/blog/when-specs-need-more-than-prose</guid>
             <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[When Specs Need More Than Prose]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="When Specs Need More Than Prose" src="https://specbinder.dev/assets/images/hero-0c6c8ced2db93fc8c174e82c697735a9.png" width="1672" height="941" class="img_ev3q"></p>
+            <description><![CDATA[When Specifications Need More Than Prose]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="When Specifications Need More Than Prose" src="https://specbinder.dev/assets/images/hero-0c6c8ced2db93fc8c174e82c697735a9.png" width="1672" height="941" class="img_ev3q"></p>
 <p>Specification-Driven Development has settled on&nbsp;<code>.md</code>&nbsp;files for a good reason.&nbsp;Markdown is flexible,&nbsp;lightweight,&nbsp;and easy to reshape while a feature is still forming,&nbsp;for humans and LLMs alike.&nbsp;Expand a section,&nbsp;reorganize a few thoughts,&nbsp;add an open question.&nbsp;Prose is excellent at helping you think.</p>
 <p>But behavioural specifications have a different job.</p>
 <p>Once a spec starts describing behaviour that must be tested, verified, and changed safely over time, flexibility stops being enough. In an AI-assisted workflow, every meaningful change to a prose-heavy spec may need to be interpreted again before it turns into code or automated tests.</p>
