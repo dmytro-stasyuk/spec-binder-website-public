@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC70DW8EM7"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-PC70DW8EM7",{})</script><link rel="stylesheet" href="/assets/css/styles.c6a8f0b6.css">
-<script src="/assets/js/runtime~main.582ea59b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.9a3bd0fa.js" defer="defer"></script>
 <script src="/assets/js/main.08c49cd9.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -44,7 +44,7 @@
 <p>For every step the generator processes, it first searches the marker class hierarchy for an existing implementation:</p>
 <ol>
 <li class="">By <strong>method name</strong> — derived as above</li>
-<li class="">By <strong>annotation pattern</strong> (Cucumber <code>@Given</code> / <code>@When</code> / <code>@Then</code> annotations on parent methods) — when <code>useCucumberAnnotationsForStepMatching = true</code>, which is turned on by default for backward compatibility when migration from cucumber based projects</li>
+<li class="">By <strong>annotation pattern</strong> (Cucumber <code>@Given</code> / <code>@When</code> / <code>@Then</code> annotations on parent methods) — when <code>useCucumberAnnotationsForStepMatching = true</code>; off by default, opt in when migrating from Cucumber-based projects that rely on annotation values rather than method names</li>
 </ol>
 <p>If a match is found, no abstract declaration (or stub) is emitted for that step. The generated <code>@Test</code> method simply calls the inherited implementation.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See also<a href="#see-also" class="hash-link" aria-label="Direct link to See also" title="Direct link to See also" translate="no">​</a></h2>

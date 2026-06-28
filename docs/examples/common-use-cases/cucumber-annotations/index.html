@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PC70DW8EM7"></script>
 <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-PC70DW8EM7",{})</script><link rel="stylesheet" href="/assets/css/styles.c6a8f0b6.css">
-<script src="/assets/js/runtime~main.582ea59b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.9a3bd0fa.js" defer="defer"></script>
 <script src="/assets/js/main.08c49cd9.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -30,7 +30,7 @@
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-annotation-based-step-matching">2. Annotation-based step matching<a href="#2-annotation-based-step-matching" class="hash-link" aria-label="Direct link to 2. Annotation-based step matching" title="Direct link to 2. Annotation-based step matching" translate="no">​</a></h3>
 <ul>
-<li class=""><code>useCucumberAnnotationsForStepMatching</code> is <code>true</code> <strong>by default</strong></li>
+<li class=""><code>useCucumberAnnotationsForStepMatching</code> defaults to <code>false</code>; enable it with <code>@Gherkin2JUnitOptions(useCucumberAnnotationsForStepMatching = true)</code> (as this example does)</li>
 <li class="">When the generator looks for already-implemented steps in the marker hierarchy, it matches by <strong>annotation pattern</strong>, not method name</li>
 <li class="">You can use <strong>any method name</strong> you like — as long as the annotation pattern matches the Gherkin step text, the generator recognises the method as an implementation and won&#x27;t emit a stub or abstract declaration</li>
 </ul>
