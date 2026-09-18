@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SpecBinder workflow infographic</title>
+  <style>
+    :root {
+      --blue: #0062ff;
+      --blue-dark: #0046d2;
+      --blue-light: #96c3ff;
+      --border: #aacdff;
+      --text: #0f182d;
+      --green: #008223;
+      --orange: #cd4b12;
+      --purple: #6900ff;
+      --pale-green: #ecf7e8;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background: #ffffff;
+      font-family: DejaVu Sans, Arial, Helvetica, sans-serif;
+    }
+
+    .infographic-wrap {
+      width: 100%;
+      overflow-x: auto;
+      background: #ffffff;
+      padding: 0;
+    }
+
+    svg {
+      display: block;
+      width: 3600px;
+      height: 900px;
+      background: #ffffff;
+      shape-rendering: geometricPrecision;
+      text-rendering: geometricPrecision;
+    }
+
+    .card {
+      fill: #ffffff;
+      stroke: var(--border);
+      stroke-width: 2;
+    }
+
+    .badge {
+      fill: var(--blue);
+    }
+
+    .title {
+      fill: var(--text);
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    .badge-text {
+      fill: white;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .mono {
+      font-family: DejaVu Sans Mono, Menlo, Consolas, monospace;
+      font-size: 17px;
+    }
+
+    .mono-small {
+      font-family: DejaVu Sans Mono, Menlo, Consolas, monospace;
+      font-size: 14px;
+    }
+
+    .mono-mid {
+      font-family: DejaVu Sans Mono, Menlo, Consolas, monospace;
+      font-size: 15px;
+    }
+
+    .blue { fill: var(--blue); }
+    .text { fill: var(--text); }
+    .green { fill: var(--green); }
+    .orange { fill: var(--orange); }
+    .purple { fill: var(--purple); }
+    .bold { font-weight: 700; }
+
+    .run-text {
+      fill: var(--blue-dark);
+      font-size: 28px;
+      font-weight: 400;
+    }
+
+    .run-title {
+      fill: var(--blue-dark);
+      font-size: 30px;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+<div class="infographic-wrap">
+<svg viewBox="0 0 3600 900" role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="title">SpecBinder six step workflow</title>
+  <desc id="desc">A six step workflow showing how a Gherkin cart feature becomes generated JUnit 5 test code and is run like a normal JUnit test.</desc>
+
+  <defs>
+    <linearGradient id="blueGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#379cff" />
+      <stop offset="100%" stop-color="#0064eb" />
+    </linearGradient>
+    <linearGradient id="chipGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#52a9ff" />
+      <stop offset="100%" stop-color="#0064eb" />
+    </linearGradient>
+  </defs>
+
+  <!-- Card background rectangles: all equal width -->
+  <g id="cards">
+    <rect class="card" x="54"   y="78" width="500" height="742" rx="20" />
+    <rect class="card" x="624"  y="78" width="500" height="742" rx="20" />
+    <rect class="card" x="1194" y="78" width="500" height="742" rx="20" />
+    <rect class="card" x="1764" y="78" width="500" height="742" rx="20" />
+    <rect class="card" x="2334" y="78" width="500" height="742" rx="20" />
+    <rect class="card" x="2904" y="78" width="500" height="742" rx="20" />
+  </g>
+
+  <!-- arrows -->
+  <g fill="var(--blue)" stroke="var(--blue)" stroke-width="6" stroke-linecap="round">
+    <line x1="582" y1="449" x2="620" y2="449" /><polygon points="620,449 603,435 603,463" stroke="none" />
+    <line x1="1152" y1="449" x2="1190" y2="449" /><polygon points="1190,449 1173,435 1173,463" stroke="none" />
+    <line x1="1722" y1="449" x2="1760" y2="449" /><polygon points="1760,449 1743,435 1743,463" stroke="none" />
+    <line x1="2292" y1="449" x2="2330" y2="449" /><polygon points="2330,449 2313,435 2313,463" stroke="none" />
+    <line x1="2862" y1="449" x2="2900" y2="449" /><polygon points="2900,449 2883,435 2883,463" stroke="none" />
+  </g>
+
+  <!-- Step titles -->
+  <g>
+    <circle class="badge" cx="106" cy="130" r="28" /><text class="badge-text" x="106" y="139" text-anchor="middle">1.</text><text class="title" x="152" y="132" dominant-baseline="middle">1. Write spec</text>
+    <circle class="badge" cx="676" cy="130" r="28" /><text class="badge-text" x="676" y="139" text-anchor="middle">2.</text><text class="title" x="722" y="132" dominant-baseline="middle">2. Add marker class</text>
+    <circle class="badge" cx="1246" cy="130" r="28" /><text class="badge-text" x="1246" y="139" text-anchor="middle">3.</text><text class="title" x="1292" y="132" dominant-baseline="middle">3. Compile</text>
+    <circle class="badge" cx="1816" cy="130" r="28" /><text class="badge-text" x="1816" y="139" text-anchor="middle">4.</text><text class="title" x="1862" y="132" dominant-baseline="middle">4. Generated tests</text>
+    <circle class="badge" cx="2386" cy="130" r="28" /><text class="badge-text" x="2386" y="139" text-anchor="middle">5.</text><text class="title" x="2432" y="132" dominant-baseline="middle">5. Implement step methods</text>
+    <circle class="badge" cx="2956" cy="130" r="28" /><text class="badge-text" x="2956" y="139" text-anchor="middle">6.</text><text class="title" x="3002" y="132" dominant-baseline="middle">6. Run &amp; debug</text>
+  </g>
+
+  <!-- Step 1 file panel -->
+  <g transform="translate(78 176)">
+    <rect x="0" y="0" width="452" height="616" rx="16" fill="#fff" stroke="var(--border)" stroke-width="2" />
+    <path d="M16,0 H436 A16,16 0 0 1 452,16 V66 H0 V16 A16,16 0 0 1 16,0 Z" fill="#f9fcff" stroke="var(--border)" stroke-width="2" />
+    <line x1="0" y1="66" x2="452" y2="66" stroke="var(--border)" stroke-width="2" />
+    <path d="M28 17 H46 L56 27 V55 H28 Z M46 17 V27 H56" fill="none" stroke="var(--blue)" stroke-width="3" />
+    <text class="text" x="78" y="36" font-size="20" dominant-baseline="middle">specs/cart.feature</text>
+
+    <g class="mono">
+      <text x="22" y="116"><tspan class="blue bold">Feature:</tspan><tspan class="text"> Shopping cart</tspan></text>
+      <text x="22" y="174"><tspan class="green bold">Scenario:</tspan><tspan class="text"> Update quantity</tspan></text>
+
+      <text x="22" y="242"><tspan class="orange bold">Given</tspan><tspan class="text"> my cart contains </tspan><tspan class="purple bold">"Wireless</tspan></text>
+      <text x="64" y="272"><tspan class="purple bold">Headphones"</tspan></text>
+
+      <text x="22" y="326"><tspan class="orange bold">And</tspan><tspan class="text"> the price for </tspan><tspan class="purple bold">"Wireless</tspan></text>
+      <text x="64" y="356"><tspan class="purple bold">Headphones"</tspan><tspan class="text"> is </tspan><tspan class="purple bold">"60.00"</tspan></text>
+
+      <text x="22" y="410"><tspan class="orange bold">When</tspan><tspan class="text"> I change the quantity to </tspan><tspan class="purple bold">"2"</tspan></text>
+      <text x="22" y="468"><tspan class="orange bold">Then</tspan><tspan class="text"> my cart subtotal is </tspan><tspan class="purple bold">"120.00"</tspan></text>
+    </g>
+  </g>
+
+  <!-- Step 2 marker class -->
+  <g transform="translate(624 78)">
+    <text class="blue" x="470" y="190" text-anchor="end" font-size="22">Java</text>
+    <text class="mono" x="54" y="304"><tspan class="blue bold">@GherkinTest</tspan><tspan class="text">(</tspan><tspan class="purple">"specs/cart.feature"</tspan><tspan class="text">)</tspan></text>
+    <text class="mono" x="54" y="396"><tspan class="blue bold">class</tspan><tspan class="text"> CartFeature {</tspan></text>
+    <text class="mono" x="54" y="442"><tspan class="text">}</tspan></text>
+  </g>
+
+  <!-- Step 3 compile -->
+  <g transform="translate(1194 78)">
+    <!-- chip pins -->
+    <g stroke="var(--blue-light)" stroke-width="8" stroke-linecap="round">
+      <line x1="205" y1="154" x2="205" y2="186" /><line x1="222" y1="154" x2="222" y2="186" /><line x1="239" y1="154" x2="239" y2="186" /><line x1="256" y1="154" x2="256" y2="186" /><line x1="273" y1="154" x2="273" y2="186" />
+      <line x1="205" y1="290" x2="205" y2="322" /><line x1="222" y1="290" x2="222" y2="322" /><line x1="239" y1="290" x2="239" y2="322" /><line x1="256" y1="290" x2="256" y2="322" /><line x1="273" y1="290" x2="273" y2="322" />
+      <line x1="168" y1="205" x2="200" y2="205" /><line x1="168" y1="222" x2="200" y2="222" /><line x1="168" y1="239" x2="200" y2="239" /><line x1="168" y1="256" x2="200" y2="256" /><line x1="168" y1="273" x2="200" y2="273" />
+      <line x1="304" y1="205" x2="336" y2="205" /><line x1="304" y1="222" x2="336" y2="222" /><line x1="304" y1="239" x2="336" y2="239" /><line x1="304" y1="256" x2="336" y2="256" /><line x1="304" y1="273" x2="336" y2="273" />
+    </g>
+    <rect x="198" y="186" width="104" height="104" rx="18" fill="url(#chipGrad)" />
+    <circle cx="250" cy="238" r="34" fill="white" />
+    <circle cx="250" cy="238" r="17" fill="#3091f5" />
+
+    <path d="M142 400 H358 L316 348 H184 Z" fill="#50aaff" />
+    <rect x="142" y="400" width="216" height="126" rx="14" fill="url(#blueGrad)" />
+    <text x="250" y="456" fill="white" text-anchor="middle" dominant-baseline="middle" font-size="25">Java⌄</text>
+    <text x="250" y="498" fill="white" text-anchor="middle" dominant-baseline="middle" font-size="22">annotation processor</text>
+
+    <rect x="112" y="612" width="276" height="76" rx="14" fill="url(#blueGrad)" />
+    <circle cx="160" cy="650" r="18" fill="none" stroke="white" stroke-width="3" />
+    <line x1="160" y1="626" x2="160" y2="638" stroke="white" stroke-width="3" />
+    <line x1="160" y1="642" x2="160" y2="652" stroke="white" stroke-width="3" />
+    <text x="268" y="651" fill="white" text-anchor="middle" dominant-baseline="middle" font-size="24">compile time</text>
+  </g>
+
+  <!-- Step 4 generated tests -->
+  <g transform="translate(1764 78)">
+    <text class="blue" x="472" y="122" text-anchor="end" font-size="20">Java (JUnit 5)</text>
+    <g class="mono-small">
+      <text x="36" y="170"><tspan class="blue bold">abstract class</tspan><tspan class="text"> CartFeatureScenarios</tspan></text>
+      <text x="36" y="200"><tspan class="blue bold">  extends</tspan><tspan class="text"> CartFeature {</tspan></text>
+
+      <text x="36" y="260"><tspan class="blue bold">  abstract void</tspan><tspan class="text"> givenMyCartContains(</tspan><tspan class="blue bold">String $p1</tspan><tspan class="text">);</tspan></text>
+      <text x="36" y="290"><tspan class="blue bold">  abstract void</tspan><tspan class="text"> andThePriceFor$p1Is$p2(</tspan></text>
+      <text x="78" y="320"><tspan class="blue bold">String $p1, Double $p2</tspan><tspan class="text">);</tspan></text>
+      <text x="36" y="350"><tspan class="blue bold">  abstract void</tspan><tspan class="text"> whenIChangeTheQuantityTo(</tspan></text>
+      <text x="78" y="380"><tspan class="blue bold">Integer $p1</tspan><tspan class="text">);</tspan></text>
+      <text x="36" y="410"><tspan class="blue bold">  abstract void</tspan><tspan class="text"> thenMyCartSubtotalIs(</tspan><tspan class="blue bold">Double $p1</tspan><tspan class="text">);</tspan></text>
+
+      <text x="36" y="470"><tspan class="blue bold">  @Test</tspan></text>
+      <text x="36" y="500"><tspan class="blue bold">  void</tspan><tspan class="text"> updateQuantity() {</tspan></text>
+      <text x="78" y="530"><tspan class="green bold">givenMyCartContains</tspan><tspan class="text">(</tspan><tspan class="purple bold">"Wireless Headphones"</tspan><tspan class="text">);</tspan></text>
+      <text x="78" y="560"><tspan class="green bold">andThePriceFor$p1Is$p2</tspan><tspan class="text">(</tspan></text>
+      <text x="120" y="590"><tspan class="purple bold">"Wireless Headphones"</tspan><tspan class="text">, </tspan><tspan class="blue bold">60.00</tspan><tspan class="text">);</tspan></text>
+      <text x="78" y="620"><tspan class="green bold">whenIChangeTheQuantityTo</tspan><tspan class="text">(</tspan><tspan class="blue bold">2</tspan><tspan class="text">);</tspan></text>
+      <text x="78" y="650"><tspan class="green bold">thenMyCartSubtotalIs</tspan><tspan class="text">(</tspan><tspan class="blue bold">120.00</tspan><tspan class="text">);</tspan></text>
+      <text x="36" y="680"><tspan class="text">  }</tspan></text>
+      <text x="36" y="710"><tspan class="text">}</tspan></text>
+    </g>
+
+    <rect x="38" y="650" width="424" height="62" rx="12" fill="var(--pale-green)" stroke="#d7e6cd" stroke-width="1" opacity="0.95" />
+    <circle cx="90" cy="681" r="18" fill="none" stroke="var(--green)" stroke-width="3" />
+    <path d="M81 680 L91 691 L104 668" fill="none" stroke="var(--green)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="128" y="681" fill="var(--green)" font-size="23" dominant-baseline="middle">Plain JUnit 5 test code</text>
+  </g>
+
+  <!-- Step 5 implementation -->
+  <g transform="translate(2334 78)">
+    <text class="blue" x="470" y="122" text-anchor="end" font-size="22">Java</text>
+    <g class="mono-mid">
+      <text x="38" y="170"><tspan class="blue bold">class</tspan><tspan class="text"> CartFeatureTest</tspan></text>
+      <text x="38" y="205"><tspan class="blue bold">  extends</tspan><tspan class="text"> CartFeatureScenarios {</tspan></text>
+
+      <text x="38" y="275"><tspan class="blue bold">  void</tspan><tspan class="green bold"> givenMyCartContains</tspan><tspan class="text">(String cart) {</tspan></text>
+      <text x="78" y="310"><tspan class="text">// TODO: implement</tspan></text>
+      <text x="38" y="345"><tspan class="text">  }</tspan></text>
+
+      <text x="38" y="415"><tspan class="blue bold">  void</tspan><tspan class="green bold"> whenIChangeTheQuantityTo</tspan><tspan class="text">(</tspan></text>
+      <text x="78" y="450"><tspan class="text">Integer qty) {</tspan></text>
+      <text x="78" y="485"><tspan class="text">// TODO: implement</tspan></text>
+      <text x="38" y="520"><tspan class="text">  }</tspan></text>
+
+      <text x="38" y="590"><tspan class="blue bold">  void</tspan><tspan class="green bold"> thenMyCartSubtotalIs</tspan><tspan class="text">(Double total) {</tspan></text>
+      <text x="78" y="625"><tspan class="text">// TODO: implement</tspan></text>
+      <text x="38" y="660"><tspan class="text">  }</tspan></text>
+      <text x="38" y="695"><tspan class="text">}</tspan></text>
+    </g>
+  </g>
+
+  <!-- Step 6 run/debug -->
+  <g transform="translate(2904 78)">
+    <circle cx="250" cy="290" r="80" fill="#00872d" />
+    <polygon points="228,244 228,336 296,290" fill="white" />
+    <text class="run-title" x="250" y="480" text-anchor="middle" dominant-baseline="middle">Run &amp; debug</text>
+    <text class="run-text" x="250" y="545" text-anchor="middle" dominant-baseline="middle">in IDE or CI</text>
+    <text class="run-text" x="250" y="608" text-anchor="middle" dominant-baseline="middle">like any JUnit test</text>
+  </g>
+</svg>
+</div>
+</body>
+</html>
