@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" width="1254" height="1254" role="img" aria-label="Standard test reports">
+  <!--
+    The run as a test runner shows it: a root node, the rail beneath it, and the
+    scenarios hanging off it wearing the marks they earned.
+
+    Earlier drafts drew a sheet of results, and before that bars on a sheet. Both
+    read as a document you would have to go and open. What the tile claims is
+    that scenarios come out as ordinary JUnit tests, so the icon is the runner's
+    own tree — the panel every IDE and CI already shows, with one cross in it,
+    because a report nobody has to interpret is the point.
+
+    Blue, not teal. The other six tiles are one solid silhouette in a vertical
+    #5ba4fc -> #0062fc gradient with white knocked out of it; this was the only
+    one in the site's teal, and it read as the odd one out in the row.
+
+    Panel 648 x 756 — portrait, close to the proportion the neighbouring artwork
+    runs at, so it sits at the same height in the row rather than low in its tile.
+    Three rows is what this height carries without the 30px bars going soft at
+    the 140px the tile renders at.
+
+    No background rect. The tile provides its own ground; a near-white rectangle
+    inside the icon only showed up as a faint panel of its own.
+  -->
+  <defs>
+    <linearGradient id="reportBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5ba4fc"/>
+      <stop offset="1" stop-color="#0062fc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- the runner panel -->
+  <rect x="303" y="249" width="648" height="756" rx="78" fill="url(#reportBlue)"/>
+
+  <!-- the root node: an expanded disclosure triangle and the name beside it -->
+  <path d="M381 345 h72 l-36 60 Z" fill="#ffffff"/>
+  <rect x="465" y="364" width="300" height="34" rx="17" fill="#ffffff"/>
+
+  <!--
+    The rail, and the elbow into each child. Held back to 0.6 opacity so the
+    structure stays behind the marks rather than competing with them.
+  -->
+  <path d="M417 441 V795 Q417 819 441 819 H483 M417 531 H483 M417 675 H483"
+        fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" opacity="0.6"/>
+
+  <!--
+    Three results, the middle one failed. Marks are drawn rather than filled
+    shapes so they keep their weight when the icon is scaled down to the tile.
+  -->
+  <g fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M513 532 l24 26 l48 -55"/>
+    <path d="M516 648 l54 54 M570 648 l-54 54"/>
+    <path d="M513 820 l24 26 l48 -55"/>
+  </g>
+
+  <!-- the scenario names, uneven so the list reads as real output -->
+  <g fill="#ffffff">
+    <rect x="615" y="516" width="252" height="30" rx="15"/>
+    <rect x="615" y="660" width="198" height="30" rx="15"/>
+    <rect x="615" y="804" width="234" height="30" rx="15"/>
+  </g>
+</svg>
