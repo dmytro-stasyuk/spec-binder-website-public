@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3460 720" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1a1a2e" flood-opacity="0.12"/>
+    </filter>
+    <radialGradient id="playGrad" cx="35%" cy="32%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </radialGradient>
+    <linearGradient id="cpuGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <style>
+      .card { fill: #ffffff; stroke: #c5d3e8; stroke-width: 1.5; }
+      .num-circle { fill: #3b82f6; }
+      .num-text { fill: #ffffff; font-weight: 700; font-size: 24px; text-anchor: middle; }
+      .title { fill: #1a1a2e; font-weight: 700; font-size: 39px; }
+      .code { font-family: 'SF Mono', Monaco, Consolas, 'Courier New', monospace; font-size: 24px; fill: #1a1a2e; }
+      .str { fill: #dc2626; }
+      .comment { fill: #94a3b8; font-style: italic; }
+      .kw { fill: #2563eb; font-weight: 600; }
+      .gherk-key { fill: #16a34a; font-weight: 700; }
+      .gherk-step { fill: #ea580c; font-weight: 700; }
+      .annot { fill: #c026d3; font-weight: 600; }
+      .id { fill: #7c3aed; font-weight: 600; }
+      .method { fill: #1d4ed8; }
+      .param { fill: #b45309; font-style: italic; }
+      .type { fill: #0e7490; font-weight: 600; }
+      .punct { fill: #64748b; }
+      .arrow-line { stroke: #3b82f6; stroke-width: 4; fill: none; }
+      .arrow-head { fill: #3b82f6; }
+    </style>
+  </defs>
+
+  <!-- ========== Card 1: Write spec ========== -->
+  <g transform="translate(20, 50)" filter="url(#cardShadow)">
+    <rect class="card" width="520" height="640" rx="20"/>
+    <circle class="num-circle" cx="44" cy="48" r="20"/>
+    <text class="num-text" x="44" y="56">1</text>
+    <text class="title" x="80" y="58">1. Write spec</text>
+
+    <!-- Filename pill -->
+    <g transform="translate(28, 90)">
+      <rect width="464" height="44" fill="#f1f5f9" rx="10" stroke="#e2e8f0"/>
+      <path d="M 18 13 L 33 13 L 40 19 L 40 34 L 18 34 Z" fill="#94a3b8"/>
+      <path d="M 33 13 L 33 19 L 40 19 Z" fill="#cbd5e1"/>
+      <text x="52" y="31" font-size="22" fill="#475569" font-family="'SF Mono', Monaco, monospace">specs/cart.feature</text>
+    </g>
+
+    <!-- Code -->
+    <g transform="translate(30, 180)">
+      <text class="code" x="0" y="0"><tspan class="gherk-key">Feature:</tspan> Shopping cart</text>
+      <text class="code" x="0" y="56"><tspan class="gherk-key">Scenario:</tspan> Update quantity</text>
+      <text class="code" x="0" y="112"><tspan class="gherk-step">Given</tspan> my cart has</text>
+      <text class="code" x="68" y="142"><tspan class="str">"wireless headphones"</tspan></text>
+      <text class="code" x="0" y="198"><tspan class="gherk-step">And</tspan> price is <tspan class="str">"60.00"</tspan></text>
+      <text class="code" x="0" y="254"><tspan class="gherk-step">When</tspan> I set qty to <tspan class="str">"2"</tspan></text>
+      <text class="code" x="0" y="310"><tspan class="gherk-step">Then</tspan> subtotal is <tspan class="str">"120.00"</tspan></text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <g transform="translate(545, 370)">
+    <line class="arrow-line" x1="0" y1="0" x2="36" y2="0"/>
+    <polygon class="arrow-head" points="36,-10 50,0 36,10"/>
+  </g>
+
+  <!-- ========== Card 2: Add marker class ========== -->
+  <g transform="translate(600, 50)" filter="url(#cardShadow)">
+    <rect class="card" width="520" height="640" rx="20"/>
+    <circle class="num-circle" cx="44" cy="48" r="20"/>
+    <text class="num-text" x="44" y="56">2</text>
+    <text class="title" x="80" y="58">2. Add marker class</text>
+
+    <g transform="translate(30, 230)">
+      <text class="code" x="0" y="0"><tspan class="annot">@GherkinTest</tspan><tspan class="punct">(</tspan><tspan class="str">"specs/cart.feature"</tspan><tspan class="punct">)</tspan></text>
+      <text class="code" x="0" y="90"><tspan class="kw">class</tspan> <tspan class="id">CartFeature</tspan> <tspan class="punct">{</tspan></text>
+      <text class="code" x="0" y="120"><tspan class="punct">}</tspan></text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <g transform="translate(1125, 370)">
+    <line class="arrow-line" x1="0" y1="0" x2="36" y2="0"/>
+    <polygon class="arrow-head" points="36,-10 50,0 36,10"/>
+  </g>
+
+  <!-- ========== Card 3: Compile ========== -->
+  <g transform="translate(1180, 50)" filter="url(#cardShadow)">
+    <rect class="card" width="520" height="640" rx="20"/>
+    <circle class="num-circle" cx="44" cy="48" r="20"/>
+    <text class="num-text" x="44" y="56">3</text>
+    <text class="title" x="80" y="58">3. Compile</text>
+
+    <!-- Processor module: CPU + label all inside one graphic frame -->
+    <g transform="translate(110, 140)">
+      <!-- Outer chip body with gradient -->
+      <rect width="300" height="280" rx="18" fill="url(#cpuGrad)"/>
+
+      <!-- Pins: left -->
+      <rect x="-10" y="50" width="10" height="14" fill="#2563eb" rx="2"/>
+      <rect x="-10" y="100" width="10" height="14" fill="#2563eb" rx="2"/>
+      <rect x="-10" y="160" width="10" height="14" fill="#2563eb" rx="2"/>
+      <rect x="-10" y="216" width="10" height="14" fill="#2563eb" rx="2"/>
+
+      <!-- Pins: right -->
+      <rect x="300" y="50" width="10" height="14" fill="#2563eb" rx="2"/>
+      <rect x="300" y="100" width="10" height="14" fill="#2563eb" rx="2"/>
+      <rect x="300" y="160" width="10" height="14" fill="#2563eb" rx="2"/>
+      <rect x="300" y="216" width="10" height="14" fill="#2563eb" rx="2"/>
+
+      <!-- Pins: top -->
+      <rect x="60" y="-10" width="14" height="10" fill="#2563eb" rx="2"/>
+      <rect x="140" y="-10" width="14" height="10" fill="#2563eb" rx="2"/>
+      <rect x="220" y="-10" width="14" height="10" fill="#2563eb" rx="2"/>
+
+      <!-- Pins: bottom -->
+      <rect x="60" y="280" width="14" height="10" fill="#2563eb" rx="2"/>
+      <rect x="140" y="280" width="14" height="10" fill="#2563eb" rx="2"/>
+      <rect x="220" y="280" width="14" height="10" fill="#2563eb" rx="2"/>
+
+      <!-- Inner white panel -->
+      <rect x="22" y="22" width="256" height="236" rx="12" fill="#ffffff"/>
+
+      <!-- Small CPU die inside the panel -->
+      <g transform="translate(115, 50)">
+        <rect width="70" height="70" rx="8" fill="url(#cpuGrad)"/>
+        <rect x="16" y="16" width="38" height="38" rx="4" fill="#ffffff"/>
+        <circle cx="35" cy="35" r="7" fill="#2563eb"/>
+      </g>
+
+      <!-- "Java ▾" inside the graphic -->
+      <g transform="translate(150, 168)">
+        <text x="-8" y="0" text-anchor="end" font-size="28" fill="#1a1a2e" font-weight="600">Java</text>
+        <polygon points="0,-14 24,-14 12,7" fill="#1a1a2e"/>
+      </g>
+
+      <!-- "annotation processor" inside the graphic -->
+      <text x="150" y="206" text-anchor="middle" font-size="24" fill="#1a1a2e">annotation processor</text>
+    </g>
+
+    <!-- Compile time pill -->
+    <g transform="translate(140, 470)">
+      <rect width="240" height="60" rx="30" fill="url(#pillGrad)"/>
+      <!-- Clock icon -->
+      <g transform="translate(40, 30)">
+        <circle r="16" fill="none" stroke="#ffffff" stroke-width="2.4"/>
+        <line x1="0" y1="0" x2="0" y2="-9" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="0" y1="0" x2="8" y2="0" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/>
+      </g>
+      <text x="142" y="40" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="600">compile time</text>
+    </g>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <g transform="translate(1705, 370)">
+    <line class="arrow-line" x1="0" y1="0" x2="36" y2="0"/>
+    <polygon class="arrow-head" points="36,-10 50,0 36,10"/>
+  </g>
+
+  <!-- ========== Card 4: Generated tests ========== -->
+  <g transform="translate(1760, 50)" filter="url(#cardShadow)">
+    <rect class="card" width="520" height="640" rx="20"/>
+    <circle class="num-circle" cx="44" cy="48" r="20"/>
+    <text class="num-text" x="44" y="56">4</text>
+    <text class="title" x="80" y="58">4. Generated tests</text>
+
+    <g transform="translate(28, 108)">
+      <text class="code" x="0" y="0"><tspan class="kw">abstract class</tspan></text>
+      <text class="code" x="0" y="28">  <tspan class="id">CartFeatureScenarios</tspan></text>
+      <text class="code" x="0" y="56">  <tspan class="kw">extends</tspan> <tspan class="id">CartFeature</tspan> <tspan class="punct">{</tspan></text>
+      <text class="code" x="0" y="100">  <tspan class="kw">abstract</tspan> <tspan class="type">void</tspan> <tspan class="method">givenMyCartHas</tspan><tspan class="punct">(</tspan></text>
+      <text class="code" x="0" y="128">      <tspan class="type">String</tspan> <tspan class="param">$0</tspan><tspan class="punct">);</tspan></text>
+      <text class="code" x="0" y="156">  <tspan class="kw">abstract</tspan> <tspan class="type">void</tspan> <tspan class="method">whenISetQtyTo</tspan><tspan class="punct">(</tspan></text>
+      <text class="code" x="0" y="184">      <tspan class="type">String</tspan> <tspan class="param">$0</tspan><tspan class="punct">);</tspan></text>
+      <text class="code" x="0" y="212">  <tspan class="kw">abstract</tspan> <tspan class="type">void</tspan> <tspan class="method">thenSubtotalIs</tspan><tspan class="punct">(</tspan></text>
+      <text class="code" x="0" y="240">      <tspan class="type">String</tspan> <tspan class="param">$0</tspan><tspan class="punct">);</tspan></text>
+      <text class="code" x="0" y="284">  <tspan class="annot">@Test</tspan></text>
+      <text class="code" x="0" y="312">  <tspan class="type">void</tspan> <tspan class="method">updateQuantity</tspan><tspan class="punct">()</tspan> <tspan class="punct">{</tspan></text>
+      <text class="code" x="0" y="340">    <tspan class="method">givenMyCartHas</tspan><tspan class="punct">(</tspan><tspan class="str">"headphones"</tspan><tspan class="punct">);</tspan></text>
+      <text class="code" x="0" y="368">    <tspan class="method">whenISetQtyTo</tspan><tspan class="punct">(</tspan><tspan class="str">"2"</tspan><tspan class="punct">);</tspan></text>
+      <text class="code" x="0" y="396">    <tspan class="method">thenSubtotalIs</tspan><tspan class="punct">(</tspan><tspan class="str">"120.00"</tspan><tspan class="punct">);</tspan></text>
+      <text class="code" x="0" y="424">  <tspan class="punct">}</tspan></text>
+      <text class="code" x="0" y="452"><tspan class="punct">}</tspan></text>
+    </g>
+
+    <!-- Plain JUnit 5 badge -->
+    <g transform="translate(80, 580)">
+      <rect width="360" height="50" rx="25" fill="#dcfce7" stroke="#86efac"/>
+      <circle cx="30" cy="25" r="13" fill="#16a34a"/>
+      <polyline points="24,25 28,29 36,18" stroke="#ffffff" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="54" y="33" font-size="22" fill="#1a1a2e" font-weight="500">Plain JUnit 5 test code</text>
+    </g>
+  </g>
+
+  <!-- Arrow 4 -> 5 -->
+  <g transform="translate(2285, 370)">
+    <line class="arrow-line" x1="0" y1="0" x2="36" y2="0"/>
+    <polygon class="arrow-head" points="36,-10 50,0 36,10"/>
+  </g>
+
+  <!-- ========== Card 5: Implement steps ========== -->
+  <g transform="translate(2340, 50)" filter="url(#cardShadow)">
+    <rect class="card" width="520" height="640" rx="20"/>
+    <circle class="num-circle" cx="44" cy="48" r="20"/>
+    <text class="num-text" x="44" y="56">5</text>
+    <text class="title" x="80" y="58">5. Implement steps</text>
+
+    <g transform="translate(28, 130)">
+      <text class="code" x="0" y="0"><tspan class="kw">class</tspan> <tspan class="id">CartFeatureTests</tspan></text>
+      <text class="code" x="0" y="28">  <tspan class="kw">extends</tspan> <tspan class="id">CartFeatureScenarios</tspan> <tspan class="punct">{</tspan></text>
+      <text class="code" x="0" y="78">  <tspan class="type">void</tspan> <tspan class="method">givenMyCartHas</tspan><tspan class="punct">(</tspan><tspan class="type">String</tspan> <tspan class="param">s</tspan><tspan class="punct">)</tspan> <tspan class="punct">{</tspan></text>
+      <text class="code" x="0" y="106">    <tspan class="comment">// TODO: implement</tspan></text>
+      <text class="code" x="0" y="134">  <tspan class="punct">}</tspan></text>
+      <text class="code" x="0" y="184">  <tspan class="type">void</tspan> <tspan class="method">whenISetQtyTo</tspan><tspan class="punct">(</tspan><tspan class="type">String</tspan> <tspan class="param">s</tspan><tspan class="punct">)</tspan> <tspan class="punct">{</tspan></text>
+      <text class="code" x="0" y="212">    <tspan class="comment">// TODO: implement</tspan></text>
+      <text class="code" x="0" y="240">  <tspan class="punct">}</tspan></text>
+      <text class="code" x="0" y="290">  <tspan class="type">void</tspan> <tspan class="method">thenSubtotalIs</tspan><tspan class="punct">(</tspan><tspan class="type">String</tspan> <tspan class="param">s</tspan><tspan class="punct">)</tspan> <tspan class="punct">{</tspan></text>
+      <text class="code" x="0" y="318">    <tspan class="comment">// TODO: implement</tspan></text>
+      <text class="code" x="0" y="346">  <tspan class="punct">}</tspan></text>
+      <text class="code" x="0" y="374"><tspan class="punct">}</tspan></text>
+    </g>
+  </g>
+
+  <!-- Arrow 5 -> 6 -->
+  <g transform="translate(2865, 370)">
+    <line class="arrow-line" x1="0" y1="0" x2="36" y2="0"/>
+    <polygon class="arrow-head" points="36,-10 50,0 36,10"/>
+  </g>
+
+  <!-- ========== Card 6: Run & debug ========== -->
+  <g transform="translate(2920, 50)" filter="url(#cardShadow)">
+    <rect class="card" width="520" height="640" rx="20"/>
+    <circle class="num-circle" cx="44" cy="48" r="20"/>
+    <text class="num-text" x="44" y="56">6</text>
+    <text class="title" x="80" y="58">6. Run &amp; debug</text>
+
+    <!-- Play button with gradient -->
+    <circle cx="260" cy="270" r="88" fill="url(#playGrad)"/>
+    <polygon points="237,228 237,312 312,270" fill="#ffffff"/>
+
+    <text x="260" y="450" text-anchor="middle" font-size="32" fill="#1e40af" font-weight="500">Run &amp; debug</text>
+    <text x="260" y="494" text-anchor="middle" font-size="28" fill="#1e40af">in IDE or CI</text>
+    <text x="260" y="534" text-anchor="middle" font-size="28" fill="#1e40af">like any JUnit test</text>
+  </g>
+</svg>
